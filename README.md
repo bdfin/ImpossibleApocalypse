@@ -1,2 +1,2 @@
-# Impossible Apocalypse
-A text adventure RPG.
+****# Impossible Apocalypse
+A .NET Core console text adventure RPG.
