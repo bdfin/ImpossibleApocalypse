@@ -6,31 +6,21 @@ namespace ImpossibleApocalypse.App
 {
     class Program
     {
-        public static Character Character = new Character();
-
         static void Main(string[] args)
         {
-            Start();
+            Utilities.SetConsoleProperties();
+
+            Game.Initialise();
+
+            while (Game.Character.IsDead() == false)
+            {
+                Game.Intro();
+                Game.ChapterOne();
+            }
+
+            Game.GameOver();
 
             Console.ReadKey();
-        }
-
-        static void Start()
-        {
-            Console.Title = "Impossible Apocalypse";
-            Art.GameLogo();
-
-            Text.Print(StandardMessages.WelcomeMessage());
-            Utilities.Continue();
-
-            Text.Print(StandardMessages.IntroMessage());
-            Utilities.Continue();
-
-            Art.ChapterOneText();
-            Art.CampFire();
-            Text.Print(StandardMessages.ChapterOneIntro());
-            Events.IncreaseHunger(Character, 2);
-            Character.ShowStats();
         }
     }
 }

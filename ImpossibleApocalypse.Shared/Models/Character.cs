@@ -12,6 +12,8 @@ namespace ImpossibleApocalypse.Shared.Models
         public int Luck { get; set; } = 5;
         public int Hunger { get; set; } = 5;
 
+        public bool IsDead() => HitPoints <= 0;
+
         public void ShowStats()
         {
             string stats = $@"
@@ -23,7 +25,6 @@ namespace ImpossibleApocalypse.Shared.Models
                 |----------------------------|
                 +----------------------------+";
 
-            Console.WriteLine();
             Console.WriteLine(stats);
             Console.WriteLine();
         }

@@ -5,7 +5,7 @@ namespace ImpossibleApocalypse.Services
 {
     public static class Text
     {
-        public static void Print(string message)
+        public static void Scroll(string message)
         {
             string[] textLines = message.Split(
                                 new[] { Environment.NewLine },

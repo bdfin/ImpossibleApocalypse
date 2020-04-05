@@ -58,5 +58,54 @@ namespace ImpossibleApocalypse.Services
             Console.WriteLine();
             Console.WriteLine();
         }
+
+        public static void GameOver()
+        {
+            string youDied = @"
+                                        __   _____  _   _   ____ ___ _____ ____  
+                                        \ \ / / _ \| | | | |  _ \_ _| ____|  _ \ 
+                                         \ V / | | | | | | | | | | ||  _| | | | |
+                                          | || |_| | |_| | | |_| | || |___| |_| |
+                                          |_| \___/ \___/  |____/___|_____|____/ ";
+
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(youDied);
+            Console.WriteLine();
+            Skull();
+            Console.ResetColor();
+        }
+
+        private static void Skull()
+        {
+            string skull = @" 
+
+                                                        MNddhdmN
+                                                     ho/+-+.....+/sm
+                                                  y/....|----+.++.``+o
+                                                h+`...+--+.|-----+...``+
+                                               o.``.+---+..+---------+...d
+                                               :++:://:::::::++:+-+:::+--+m
+                                               ::/+-+////////::::+:::::+::+
+                                               +/+-+//:///////::::+::::://:
+                                               s+//+-+//::///////::::+:/++/
+                                               s+/+sydddhyoososssooo/++:oo+
+                                               syhdNNNNNmdhsssomNNNNNmy++os
+                                               shmmNNMMMMms/:+oNMMNNmmdy:/h
+                                               oodmNNMMNNsooo:+hNNNmmmh+::y
+                                               --+syhhysooyNNy::+sysso/:::+
+                                               yyyhyyyyysymMMMs/oooooo+///+
+                                               hhddmmmhysdMMMMm/++ohsyss/sN
+                                                yhmMNdhssshdyy+:::/omN+/d
+                                                yydNMdhssssss/|:::/sNs/o
+                                                mhhmNmhhhyyos++////hd//h
+                                                Mhyhddyssysos:/+/::so//h
+                                                 dyo+oyhyyhhyssh+/////+
+                                                  dyssyyhddyhsso+/+//o
+                                                    hsyyhhyysso////+d
+                                                      mhyyyyso+//od";
+
+            Console.WriteLine(skull);
+            Console.WriteLine();
+        }
     }
 }
