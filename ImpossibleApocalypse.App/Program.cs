@@ -6,7 +6,7 @@ namespace ImpossibleApocalypse.App
 {
     class Program
     {
-        public Character Character = new Character();
+        public static Character Character = new Character();
 
         static void Main(string[] args)
         {
@@ -27,6 +27,7 @@ namespace ImpossibleApocalypse.App
             Utilities.Continue();
 
             Text.Print(StandardMessages.ChapterOneIntro());
+            Events.IncreaseHunger(Character, 2);
         }
     }
 }
