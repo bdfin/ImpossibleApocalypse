@@ -28,6 +28,7 @@ namespace ImpossibleApocalypse.App
 
             Text.Print(StandardMessages.ChapterOneIntro());
             Events.IncreaseHunger(Character, 2);
+            Character.ShowStats();
         }
     }
 }
