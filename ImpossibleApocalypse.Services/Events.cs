@@ -21,7 +21,16 @@ namespace ImpossibleApocalypse.Services
             {
                 messageColour = ConsoleColor.Red;
 
-                message += "You are starving. You need to find food soon or you will die.";
+                if (character.IsDead())
+                {
+                    message += $"You have succumbed to hunger." +
+                        $"{Environment.NewLine}" +
+                        $"You struggle to keep your eyes open but conciousness finally fades.";
+
+                    goto DisplayMessage;
+                }
+
+                message += "You are starving. You need to eat soon or you will die.";
             }
             else
             {
@@ -30,11 +39,11 @@ namespace ImpossibleApocalypse.Services
                 message += "You are starting to feel hungry";
             }
 
+        DisplayMessage:
             message += Environment.NewLine;
-
             Console.ForegroundColor = messageColour;
             Console.WriteLine();
-            Text.Print(message);
+            Text.Scroll(message);
             Console.ResetColor();
         }
     }
