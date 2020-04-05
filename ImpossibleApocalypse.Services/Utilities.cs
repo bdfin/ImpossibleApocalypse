@@ -7,13 +7,22 @@ namespace ImpossibleApocalypse.Services
 {
     public static class Utilities
     {
-        public static void Continue()
+        public static void SetConsoleProperties()
         {
-            Console.WriteLine();
-            Text.Print("Press any key to continue");
-            Console.ReadLine();
-            SectionBreak();
-            Console.Clear();
+            ChangeConsoleTitle(null);
+            Console.WindowHeight = 37;
+        }
+
+        public static void ChangeConsoleTitle(string gameStage)
+        {
+            if (string.IsNullOrEmpty(gameStage))
+            {
+                Console.Title = $"Impossible Apocalypse";
+            }
+            else
+            {
+                Console.Title = $"Impossible Apocalypse - { gameStage }";
+            }
         }
 
         public static void SectionBreak()

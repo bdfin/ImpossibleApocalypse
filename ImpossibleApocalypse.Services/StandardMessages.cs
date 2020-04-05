@@ -13,6 +13,15 @@ namespace ImpossibleApocalypse.Services
             return message;
         }
 
+        public static void Continue()
+        {
+            Console.WriteLine();
+            Text.Scroll("Press any key to continue");
+            Console.ReadLine();
+            Utilities.SectionBreak();
+            Console.Clear();
+        }
+
         public static string IntroMessage()
         {
             var virusStartYear = DateTime.UtcNow.Year;
