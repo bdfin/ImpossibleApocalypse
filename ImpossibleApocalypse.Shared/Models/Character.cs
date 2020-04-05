@@ -3,7 +3,7 @@
     public class Character
     {
         public string Name { get; set; }
-        public int HitPoints { get; set; } = 100;
+        public int HitPoints { get; set; } = 70;
         public int Strenght { get; set; } = 10;
         public int Defence { get; set; } = 10;
         public int Intelligence { get; set; } = 10;
