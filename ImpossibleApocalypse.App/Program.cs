@@ -18,7 +18,7 @@ namespace ImpossibleApocalypse.App
         static void Start()
         {
             Console.Title = "Impossible Apocalypse";
-            Text.PrintTitle();
+            Art.GameLogo();
 
             Text.Print(StandardMessages.WelcomeMessage());
             Utilities.Continue();
@@ -26,6 +26,8 @@ namespace ImpossibleApocalypse.App
             Text.Print(StandardMessages.IntroMessage());
             Utilities.Continue();
 
+            Art.ChapterOneText();
+            Art.CampFire();
             Text.Print(StandardMessages.ChapterOneIntro());
             Events.IncreaseHunger(Character, 2);
             Character.ShowStats();

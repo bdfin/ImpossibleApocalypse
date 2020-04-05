@@ -11,15 +11,12 @@ namespace ImpossibleApocalypse.Services
                                 new[] { Environment.NewLine },
                                 StringSplitOptions.None);
 
-            int textScrollDelay = 50;
-            int suspentionPointScrollSpeed = 500;
-
             for (int i = 0; i < textLines.Length; i++)
             {
                 foreach (char c in textLines[i])
                 {
                     Console.Write(c);
-                    Thread.Sleep(textScrollDelay);
+                    Thread.Sleep(50);
                 }
 
                 bool isLastLine = i == textLines.Length - 1;
@@ -30,20 +27,11 @@ namespace ImpossibleApocalypse.Services
                 }
                 else
                 {
-                    WriteSuspentionPoints(suspentionPointScrollSpeed);
+                    WriteSuspentionPoints(500);
                 }
 
                 Console.WriteLine();
             }
-        }
-
-        public static void PrintTitle()
-        {
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine(StandardMessages.GameTitle());
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.ResetColor();
         }
 
         private static void WriteSuspentionPoints(int scrollSpeed)

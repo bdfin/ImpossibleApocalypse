@@ -4,22 +4,6 @@ namespace ImpossibleApocalypse.Services
 {
     public static class StandardMessages
     {
-        public static string GameTitle()
-        {
-            string title = @"
-                +-----------------------------------------+
-                |-----------------------------------------|
-                |-----------------------------------------|
-                |--|                                   |--|
-                |--|       Impossible Apocalypse       |--|
-                |--|                                   |--|
-                |-----------------------------------------|
-                |-----------------------------------------|
-                +-----------------------------------------+";
-
-            return title;
-        }
-
         public static string WelcomeMessage()
         {
             string message = $"Welcome to Impossible Apolcalypse." +
